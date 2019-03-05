@@ -1,0 +1,37 @@
+body>header {
+    font-size: 1em;
+    padding-top: 0.4em;
+    padding-bottom: 0em;
+}
+
+body>header {
+    background: #ff8000
+}
+
+body>nav {
+    position: relative;
+    background-color: #ffffff;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(#ffffff, #ffffff, #ffffff);
+    background: -moz-linear-gradient(#ffffff, #ffffff, #ffffff);
+    background: -o-linear-gradient(#ffffff, #ffffff, #ffffff);
+    background: linear-gradient(#ffffff, #ffffff, #ffffff);
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #8c8c8c;
+    padding-top: .35em;
+    padding-bottom: .35em
+}
+
+body>header h1 {
+    font-size: 1.8em;
+    font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+h1 {
+    font-size: 1.8em;
+    line-height: 1.2em;
+}
+

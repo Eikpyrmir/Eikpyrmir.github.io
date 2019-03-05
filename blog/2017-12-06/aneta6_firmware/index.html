@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+    
+    
+      <link href="/css/fonts.css" rel="stylesheet" type="text/css">
+    
+  
+
+  
+  <title>AnetA6 Firmware(Marlin)</title>
+
+  
+  
+  <link rel="stylesheet" href="/css/hugo-octopress.css">
+
+  
+  
+    <link rel="stylesheet" href="https://Eikpyrmir.github.iocss/custom.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/fork-awesome.min.css">
+  
+
+  
+  <link href="https://Eikpyrmir.github.io/favicon.png" rel="icon">
+
+  
+  
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="">
+  <meta name="author" content="Eikpyrmir">
+
+  
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+  
+
+  
+  
+</head>
+<body>
+
+
+<header role="banner">
+<hgroup>
+  
+  <h1><a href="https://Eikpyrmir.github.io/">メモ的な何か</a></h1>
+    <h2></h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+<fieldset class="mobile-nav">
+  
+  <select onchange="location = this.value;">
+    <option value="">Navigate…</option>
+      
+        <option value="https://Eikpyrmir.github.io/about/">» About</option>
+      
+        <option value="https://Eikpyrmir.github.io/post/">» Archives</option>
+      
+  </select>
+</fieldset>
+
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://Eikpyrmir.github.io/about/" title="About" >About</a></li>
+    
+  
+    
+      <li><a href="https://Eikpyrmir.github.io/post/" title="Archives" >Archives</a></li>
+    
+  
+</ul>
+
+<ul class="subscription">
+  
+    
+        <a href="https://Eikpyrmir.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+</ul>
+
+
+  <form action="https://www.google.com/search" method="get" target="_blank">
+    <fieldset role="search">
+      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      <input type="hidden" name="q" value="site:https://Eikpyrmir.github.io/" />
+    </fieldset>
+  </form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+  <p class="meta">2017-12-06 20:00 &#43;0900
+    
+    
+
+    
+    
+      - <a class="label" href="https://Eikpyrmir.github.io/categories/3d%e3%83%97%e3%83%aa%e3%83%b3%e3%82%bf%e3%83%bc/">3Dプリンター </a>
+    
+  </p>
+  <h1 class="entry-title">
+     AnetA6 Firmware(Marlin) 
+  </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          <p>基本的に、下記URLの通り。</p>
+
+<p><a href="https://github.com/JohnnyTheOne/anet3dprinter">https://github.com/JohnnyTheOne/anet3dprinter</a></p>
+
+<h3 id="必要なもの">必要なもの</h3>
+
+<ul>
+<li>Arduino IDE（実行時のバージョンは1.8.2）</li>
+<li>Sanguino</li>
+<li>u8glib</li>
+<li>Arduino UNO(ISP)</li>
+<li>オスメスジャンパーワイヤ x 6</li>
+</ul>
+
+<h3 id="注意点">注意点</h3>
+
+<ul>
+<li>Firmware書き込みの時は、AnetのAC電源はいれない</li>
+</ul>
+
+<h3 id="arduino-ideインストール">Arduino IDEインストール</h3>
+
+<ul>
+<li><p>Arduino IDEを公式サイトからダウンロードし、セットアップ</p>
+
+<p><a href="https://www.arduino.cc/">https://www.arduino.cc/</a></p></li>
+</ul>
+
+<h3 id="arduino-ide追加ボード設定">Arduino IDE追加ボード設定</h3>
+
+<ul>
+<li><p>Arduino IDEを立ち上げ、ファイル、環境設定の追加のボードマネージャのURLにSanguinoを追加</p>
+
+<p><a href="https://raw.githubusercontent.com/Lauszus/Sanguino/master/package_lauszus_sanguino_index.json">https://raw.githubusercontent.com/Lauszus/Sanguino/master/package_lauszus_sanguino_index.json</a></p></li>
+
+<li><p>ツール、ボードマネージャよりSanguinoをインストール</p></li>
+</ul>
+
+<h3 id="arduino-ide追加ライブラリ">Arduino IDE追加ライブラリ</h3>
+
+<ul>
+<li>Arduino IDEのスケッチ、ライブラリをインクルード、ライブラリを管理よりu8glibをインストール</li>
+</ul>
+
+<h3 id="arduino-uno-isp">Arduino UNO(ISP)</h3>
+
+<ul>
+<li>Arduino IDEのファイル、スケッチの例、ArduinoISPを選択</li>
+<li>ツール、ボードをArduino/Geniuo Unoを選択</li>
+<li>シリアルポートをArduino UNOのポートに設定し、ISPを書き込み</li>
+</ul>
+
+<h3 id="anet-boardとarduino-unoの配線">Anet BoardとArduino UNOの配線</h3>
+
+<ul>
+<li>配線</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th align="center">
+        Anet Board(J3)
+      </th>
+      
+      <th align="center">
+        Arduino Uno
+      </th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td align="center">
+        MISO
+      </td>
+      
+      <td align="center">
+        12ピン
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        SCK
+      </td>
+      
+      <td align="center">
+        13ピン
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        RESET
+      </td>
+      
+      <td align="center">
+        10ピン
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        GND
+      </td>
+      
+      <td align="center">
+        GND
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        MOST
+      </td>
+      
+      <td align="center">
+        11ピン
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        5V
+      </td>
+      
+      <td align="center">
+        5V
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+<li>Anet Board J3のピンアサイン</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th align="center">
+        爪あり側
+      </th>
+      
+      <th align="center">
+      </th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td align="center">
+        なし
+      </td>
+      
+      <td align="center">
+        なし
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        MISO
+      </td>
+      
+      <td align="center">
+        5V
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        SCK
+      </td>
+      
+      <td align="center">
+        MOSI
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        RESET
+      </td>
+      
+      <td align="center">
+        GND
+      </td>
+    </tr>
+    
+    <tr>
+      <td align="center">
+        なし
+      </td>
+      
+      <td align="center">
+        なし
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="marlin書き込み">Marlin書き込み</h3>
+
+<ul>
+<li><p>Anet A6用を開発してくれている人がいるので、それを使用</p>
+
+<p><a href="https://github.com/JohnnyTheOne/MarlinAnetA6">https://github.com/JohnnyTheOne/MarlinAnetA6</a></p></li>
+
+<li><p>Arduino IDEでコンパイルして、ボードをSanguino、プロセッサをATmega1214(16MHz)、書き込み装置をISP</p></li>
+
+<li><p>スケッチ、書込装置を使用して書き込む</p></li>
+</ul>
+
+<h3 id="所感">所感</h3>
+
+<ul>
+<li>起動時にBEEP音がならなくなったのがめっちゃ嬉しい</li>
+<li>なんか純正の時より動きがスムーズになったような、気のせいかも</li>
+<li>次はオートレベリングを試したい（パーツがまだ届かない）</li>
+</ul>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">Eikpyrmir</span></span>
+    
+    <time>2017-12-06 20:00 &#43;0900</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://Eikpyrmir.github.io/tags/marlin">Marlin</a>  
+    
+    </span>
+  </p>
+
+  
+
+  <p class="meta">
+    
+
+    
+      <a class="basic-alignment right" href="https://Eikpyrmir.github.io/blog/2019-03-04/2019-03-04-docker-iptalbes/" title="Dockerでbr0の通信許可">Dockerでbr0の通信許可</a>
+    
+  </p>
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+
+    <p>
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      <a target="_blank" href="https://github.com/Eikpyrmir/" title="https://github.com/Eikpyrmir/"><i class="fa fa-github fa-3x"></i></a>
+      
+      
+      <a target="_blank" href="https://twitter.com/Eikpyrmir/" title="https://twitter.com/Eikpyrmir/"><i class="fa fa-twitter fa-3x"></i></a>
+      
+         
+      
+      
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+    
+      <section class="odd">
+        
+          <h1>Reccomend Categories</h1>
+        
+        
+          <li>
+            <a href="https://Eikpyrmir.github.io/categories/linux/" title="Linux" >Linux</a>
+          </li>
+        
+          <li>
+            <a href="https://Eikpyrmir.github.io/categories/3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC/" title="3Dプリンター" >3Dプリンター</a>
+          </li>
+        
+          <li>
+            <a href="https://Eikpyrmir.github.io/categories/" title="一覧" >一覧</a>
+          </li>
+        
+        
+          <h1>Reccomend Tags</h1>
+        
+        
+          <li>
+            <a href="https://Eikpyrmir.github.io/tags/marlin/" title="Marlin" >Marlin</a>
+          </li>
+        
+          <li>
+            <a href="https://Eikpyrmir.github.io/tags/" title="一覧" >一覧</a>
+          </li>
+        
+      </section>
+    
+  
+
+  
+  
+  
+    
+      <section class="even">
+        <h1>Recent Posts</h1>
+        <ul id="recent_posts">
+          
+          
+            
+              <li class="post">
+                <a href="/blog/2019-03-04/2019-03-04-docker-iptalbes/">Dockerでbr0の通信許可</a>
+              </li>
+            
+          
+            
+              <li class="post">
+                <a href="/blog/2017-12-06/aneta6_firmware/">AnetA6 Firmware(Marlin)</a>
+              </li>
+            
+          
+            
+          
+        </ul>
+      </section>
+    
+  
+</aside>
+
+  </div>
+</div>
+
+    <footer role="contentinfo">
+      <p>Copyright &copy; 2019 Eikpyrmir - <a href="https://Eikpyrmir.github.io/license/">License</a> -
+        <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+      </p>
+    </footer>
+
+    
+    
+    
+
+    
+      <script>
+        var _gaq=[['_setAccount','UA-135635728-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
+    
+  </body>
+</html>
+

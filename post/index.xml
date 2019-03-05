@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on メモ的な何か</title>
+    <link>https://Eikpyrmir.github.io/post/</link>
+    <description>Recent content in Posts on メモ的な何か</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 04 Mar 2019 18:52:42 +0900</lastBuildDate>
+    
+	<atom:link href="https://Eikpyrmir.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dockerでbr0の通信許可</title>
+      <link>https://Eikpyrmir.github.io/blog/2019-03-04/2019-03-04-docker-iptalbes/</link>
+      <pubDate>Mon, 04 Mar 2019 18:52:42 +0900</pubDate>
+      
+      <guid>https://Eikpyrmir.github.io/blog/2019-03-04/2019-03-04-docker-iptalbes/</guid>
+      <description>&lt;p&gt;KVMとDockerを使う環境で、イーサネットデバイスをブリッジして使用する時に&lt;/p&gt;
+
+&lt;p&gt;iptablesを設定しておかないと、通信できない問題。&lt;/p&gt;
+
+&lt;p&gt;何回かハマっているのでメモ。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AnetA6 Firmware(Marlin)</title>
+      <link>https://Eikpyrmir.github.io/blog/2017-12-06/aneta6_firmware/</link>
+      <pubDate>Wed, 06 Dec 2017 20:00:00 +0900</pubDate>
+      
+      <guid>https://Eikpyrmir.github.io/blog/2017-12-06/aneta6_firmware/</guid>
+      <description>&lt;p&gt;基本的に、下記URLの通り。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/JohnnyTheOne/anet3dprinter&#34;&gt;https://github.com/JohnnyTheOne/anet3dprinter&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
