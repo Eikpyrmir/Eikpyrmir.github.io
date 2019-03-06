@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja-JP">
 <head>
@@ -17,7 +14,7 @@
   
 
   
-  <title>3dプリンター</title>
+  <title>Hugo &#43; Github Pages &#43; CircleCI</title>
 
   
   
@@ -36,10 +33,10 @@
   <link href="https://eikpyrmir.github.io/favicon.png" rel="icon">
 
   
-  <link href="https://eikpyrmir.github.io/categories/3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC/index.xml" rel="alternate" type="application/rss+xml" title="メモ的な何か" />
+  
 
   <meta name="description" content="" />
-  <meta name="keywords" content="">
+  <meta name="keywords" content="CircleCI,Hugo,Github Pages">
   <meta name="author" content="Eikpyrmir">
 
   
@@ -111,47 +108,147 @@
 <div id="main">
   <div id="content">
     <div>
-      <article role="article">
-        <header>
-          <h1 class="entry-title">
-            Category: 3dプリンター
-          </h1>
-        </header>
-        <div id="blog-archives" class="category">
-          
-          <h2>
-            2017
-          </h2>
-          <article>
-            <h1>
-              <a href="https://eikpyrmir.github.io/blog/2017-12-06/aneta6_firmware/" title="AnetA6 Firmware(Marlin)">AnetA6 Firmware(Marlin)</a>
-            </h1>
-            <time>
-              <span class="month">Dec</span>
-              <span class="day">6</span>
-            </time>
-            <footer>
-              <span class="categories"> 
-                
-                
-                posted in:
-                 <a class="category" href="https://eikpyrmir.github.io/categories/3d%e3%83%97%e3%83%aa%e3%83%b3%e3%82%bf%e3%83%bc">3Dプリンター</a>
-              </br>
-                
+      <article class="hentry" role="article">
 
-                
-                
-                tags:
-                 <a class="category" href="https://eikpyrmir.github.io/tags/marlin">Marlin</a>
-                
-              </span>
-            </footer>
-          </article>
+        
+        
+
+<header>
+  <p class="meta">2019-03-06 09:00 UTC
+    
+    
+
+    
+    
+      - <a class="label" href="https://eikpyrmir.github.io/categories/linux/">Linux </a>
+    
+  </p>
+  <h1 class="entry-title">
+     Hugo &#43; Github Pages &#43; CircleCI 
+  </h1>
+</header>
+
+
+        <div class="entry-content">
           
+          
+          
+          <p>Hugo + Github Pages + CircleCIを使ってデプロイする時に、<br />
+CircleCIの設定にハマったので、メモ。</p>
+
+<h3 id="circleciに登録する前に">CircleCIに登録する前に</h3>
+
+<ol>
+<li><p>CircleCIがgithubへpushするために、SSH Keyをssh-keygen -t ecdsa -b 384 -m pemで作成しておく</p></li>
+
+<li><p>githubに生成したSSH公開鍵を設定</p></li>
+
+<li><p>Hugoのディレクトリに.circleci/config.ymlを作成</p></li>
+</ol>
+
+<ul>
+<li><p>フォルダ構成</p>
+
+<pre><code>.
+├── .circleci
+│   └── config.yml
+├── .git
+├── .gitmodules
+├── archetypes
+├── config.toml
+├── content
+├── layouts
+├── resources
+├── static
+└── themes
+</code></pre></li>
+
+<li><p>config.yml</p></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version: <span style="color:#ae81ff">2</span>
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    branches:
+      only:
+        - master
+    working_directory: ~/hugo
+    steps:
+      - run:
+          name: Update enviroment
+          command: apk add --no-cache git
+      - checkout:
+      - add_ssh_keys:
+          fingerprints:
+		    - <span style="color:#e6db74">&#34;xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx&#34;</span>
+      - run:
+          name: Building pages
+          command: <span style="color:#e6db74">|
+</span><span style="color:#e6db74">              git submodule update --init --recursive</span>
+              HUGO_ENV=production hugo -v
+              git config --global user.name <span style="color:#e6db74">&#34;xxxx&#34;</span>
+              git config --global user.email <span style="color:#e6db74">&#34;xxxx&#34;</span>
+      - run:
+          name: push to master
+          command: <span style="color:#e6db74">|
+</span><span style="color:#e6db74">              git clone https://github.com/xxxx/xxxx.github.io.git</span>
+              ls
+              cp -rp public/* xxxx.github.io/
+              cd xxxx.github.io
+              ls
+              git status
+              git add .
+              git commit -m <span style="color:#e6db74">&#34;circle ci update&#34;</span>
+              git push origin master</code></pre></div>
+<p>fingerprintsは、githubに登録したSSH Keyのfingerprintを設定して、<br />
+コミットとプッシュをしておく</p>
+
+<h3 id="circleciの設定">CircleCIの設定</h3>
+
+<ol>
+<li><p>CircleCIのアカウントを作成し、ダッシュボードからADD PROJECT</p></li>
+
+<li><p>リポジトリを選択し、Set Up Project</p></li>
+
+<li><p>PERMISSIONS、SSH Permissionsを選択し、Add SSH Key</p></li>
+
+<li><p>SSH秘密鍵を設定</p></li>
+</ol>
+
+<p>これでgithubへpushするたびにCircleCIが走り、デプロイしてくれるはず<br />
+いろいろミスってfailedしまくった</p>
         </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">Eikpyrmir</span></span>
+    
+    <time>2019-03-06 09:00 UTC</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://eikpyrmir.github.io/tags/hugo">Hugo</a>  <a class="category" href="https://eikpyrmir.github.io/tags/ci">CI</a>  <a class="category" href="https://eikpyrmir.github.io/tags/github-pages">Github Pages</a>  
+    
+    </span>
+  </p>
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://eikpyrmir.github.io/blog/2019-03-04/2019-03-04-docker-iptalbes/" title="Dockerでbr0の通信許可">Dockerでbr0の通信許可</a>
+    
+
+    
+  </p>
+  
+</footer>
+
       </article>
     </div>
-
     
 
 <aside class="sidebar thirds">

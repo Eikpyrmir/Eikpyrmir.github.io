@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://eikpyrmir.github.io/blog/2019-03-06/2019-03-06-circleci/</loc>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://eikpyrmir.github.io/blog/2019-03-04/2019-03-04-docker-iptalbes/</loc>
     <lastmod>2019-03-04T18:52:42+09:00</lastmod>
   </url>
@@ -30,6 +35,12 @@
   </url>
   
   <url>
+    <loc>https://eikpyrmir.github.io/tags/ci/</loc>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://eikpyrmir.github.io/tags/debian/</loc>
     <lastmod>2019-03-04T18:52:42+09:00</lastmod>
     <priority>0</priority>
@@ -42,8 +53,20 @@
   </url>
   
   <url>
+    <loc>https://eikpyrmir.github.io/tags/github-pages/</loc>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/tags/hugo/</loc>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://eikpyrmir.github.io/categories/linux/</loc>
-    <lastmod>2019-03-04T18:52:42+09:00</lastmod>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,7 +78,7 @@
   
   <url>
     <loc>https://eikpyrmir.github.io/post/</loc>
-    <lastmod>2019-03-04T18:52:42+09:00</lastmod>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -67,13 +90,13 @@
   
   <url>
     <loc>https://eikpyrmir.github.io/tags/</loc>
-    <lastmod>2019-03-04T18:52:42+09:00</lastmod>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://eikpyrmir.github.io/</loc>
-    <lastmod>2019-03-04T18:52:42+09:00</lastmod>
+    <lastmod>2019-03-06T09:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
