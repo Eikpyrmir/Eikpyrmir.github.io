@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://eikpyrmir.github.io/blog/2019-03-19/2019-03-19-tp-link-a2600/</loc>
+    <lastmod>2019-03-19T23:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://eikpyrmir.github.io/blog/2019-03-06/2019-03-06-circleci/</loc>
     <lastmod>2019-03-06T19:00:00+09:00</lastmod>
   </url>
@@ -78,7 +83,7 @@
   
   <url>
     <loc>https://eikpyrmir.github.io/post/</loc>
-    <lastmod>2019-03-06T19:00:00+09:00</lastmod>
+    <lastmod>2019-03-19T23:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,8 +100,26 @@
   </url>
   
   <url>
+    <loc>https://eikpyrmir.github.io/tags/tp-link/</loc>
+    <lastmod>2019-03-19T23:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/categories/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</loc>
+    <lastmod>2019-03-19T23:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://eikpyrmir.github.io/</loc>
-    <lastmod>2019-03-06T19:00:00+09:00</lastmod>
+    <lastmod>2019-03-19T23:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/tags/%E7%84%A1%E7%B7%9Alan%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC/</loc>
+    <lastmod>2019-03-19T23:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
