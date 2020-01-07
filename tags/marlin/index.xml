@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Marlin on メモ的な何か</title>
@@ -18,7 +18,6 @@
       
       <guid>https://eikpyrmir.github.io/blog/2017-12-06/aneta6_firmware/</guid>
       <description>&lt;p&gt;基本的に、下記URLの通り。&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://github.com/JohnnyTheOne/anet3dprinter&#34;&gt;https://github.com/JohnnyTheOne/anet3dprinter&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     

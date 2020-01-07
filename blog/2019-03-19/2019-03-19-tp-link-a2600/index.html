@@ -40,7 +40,7 @@
   <meta name="author" content="Eikpyrmir">
 
   
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.62.2" />
 
   
   
@@ -133,65 +133,51 @@
           
           
           
-          <p>最近、無線LANの調子が悪い事が<br />
-多かったので、買ってみた。<br />
-前機種は、Aterm WG2600HPを使用していて、<br />
-スペック的には変わらない気もする。<br />
+          <p>最近、無線LANの調子が悪い事が<br>
+多かったので、買ってみた。<br>
+前機種は、Aterm WG2600HPを使用していて、<br>
+スペック的には変わらない気もする。<br>
 前機種にはなかったバンドステアリングを調査。</p>
-
 <h3 id="環境について">環境について</h3>
-
 <ul>
 <li>二階建ての2Fリビングの端っこに設置</li>
 <li>iperf3にて測定</li>
 <li>サーバーがDebianギガビット有線接続</li>
-<li>クライアントがAndroid無線接続(ac)<br /></li>
-<li>アクセスポイントとして使用
-<br />
-<br /></li>
+<li>クライアントがAndroid無線接続(ac)</li>
+<li>アクセスポイントとして使用</li>
 </ul>
-
 <h3 id="iperf3によるスループット測定">iperf3によるスループット測定</h3>
-
 <ul>
-<li><p>設置場所で測定(5G リンク866Mbps)</p>
-
+<li>設置場所で測定(5G リンク866Mbps)</li>
+</ul>
 <pre><code>[ ID] Interval           Transfer     Bitrate         Retr
 [  5]   0.00-10.00  sec   386 MBytes   324 Mbits/sec  2851             sender
 [  5]   0.00-10.00  sec   382 MBytes   321 Mbits/sec                  receiver
-</code></pre></li>
-
-<li><p>1F設置場所の真下あたりの部屋(5G リンク520Mbps)</p>
-
+</code></pre><ul>
+<li>1F設置場所の真下あたりの部屋(5G リンク520Mbps)</li>
+</ul>
 <pre><code>[ ID] Interval           Transfer     Bitrate         Retr
 [  5]   0.00-10.00  sec   209 MBytes   176 Mbits/sec  3823             sender
 [  5]   0.00-10.00  sec   206 MBytes   173 Mbits/sec                  receiver
-</code></pre></li>
-
-<li><p>1F端の部屋(2.4G リンク173Mbps)</p>
-
+</code></pre><ul>
+<li>1F端の部屋(2.4G リンク173Mbps)</li>
+</ul>
 <pre><code>[ ID] Interval           Transfer     Bitrate         Retr
 [  5]   0.00-10.00  sec  75.6 MBytes  63.4 Mbits/sec  671             sender
 [  5]   0.00-10.00  sec  72.1 MBytes  60.5 Mbits/sec                  receiver
-</code></pre></li>
-</ul>
-
-<h3 id="バンドステアリング">バンドステアリング</h3>
-
-<p>TP-Linkだとスマートコネクトという名称のようです。<br />
-デフォルトはオフなので、ブラウザから設定。<br />
-A2600には優先する周波数の設定とかは出来ないようでデフォルトで5Ghz優先ぽい？<br />
-部屋の端っこで5Gが届かないところだと、2.4Gに自動で切り替わるのが確認できた。<br />
-その後、5Gが強い場所に行っても2.4Gのままで切り替わらなかったので、<br />
-ちょっと微妙な気がする。。。<br />
-<del>無線LANをオフ、オンすることで再度5Gには繋がった。</del><br />
-気がついたら、5Gに戻ってる気も？<br />
+</code></pre><h3 id="バンドステアリング">バンドステアリング</h3>
+<p>TP-Linkだとスマートコネクトという名称のようです。<br>
+デフォルトはオフなので、ブラウザから設定。<br>
+A2600には優先する周波数の設定とかは出来ないようでデフォルトで5Ghz優先ぽい？<br>
+部屋の端っこで5Gが届かないところだと、2.4Gに自動で切り替わるのが確認できた。<br>
+その後、5Gが強い場所に行っても2.4Gのままで切り替わらなかったので、<br>
+ちょっと微妙な気がする。。。<br>
+<del>無線LANをオフ、オンすることで再度5Gには繋がった。</del><br>
+気がついたら、5Gに戻ってる気も？<br>
 SSIDが一つになるのはすっきりしてていいと思う。</p>
-
 <h3 id="感想">感想</h3>
-
-<p>価格がお手頃で（購入時は1万円くらい）なかなか早いと思うので、オススメです。<br />
-後は安定性については、長期的に使用してみないとわからないですね。<br />
+<p>価格がお手頃で（購入時は1万円くらい）なかなか早いと思うので、オススメです。<br>
+後は安定性については、長期的に使用してみないとわからないですね。<br>
 アクセスポイントとして、使用しているのでルーター機能についてはわからんです。</p>
         </div>
         
@@ -217,6 +203,8 @@ SSIDが一つになるのはすっきりしてていいと思う。</p>
         <a class="basic-alignment left" href="https://eikpyrmir.github.io/blog/2019-03-06/2019-03-06-circleci/" title="Hugo &#43; Github Pages &#43; CircleCI">Hugo &#43; Github Pages &#43; CircleCI</a>
     
 
+    
+      <a class="basic-alignment right" href="https://eikpyrmir.github.io/blog/2020-01-07/2020-01-07-broadcast-iptalbes/" title="UDPブロードキャストのルーター転送">UDPブロードキャストのルーター転送</a>
     
   </p>
   
@@ -308,6 +296,14 @@ SSIDが一つになるのはすっきりしてていいと思う。</p>
           
           
             
+          
+            
+              <li class="post">
+                <a href="/blog/2020-01-07/2020-01-07-broadcast-iptalbes/">UDPブロードキャストのルーター転送</a>
+              </li>
+            
+          
+            
               <li class="post">
                 <a href="/blog/2019-03-19/2019-03-19-tp-link-a2600/">TP-Link Archer A2600購入</a>
               </li>
@@ -331,8 +327,6 @@ SSIDが一つになるのはすっきりしてていいと思う。</p>
               </li>
             
           
-            
-          
         </ul>
       </section>
     
@@ -343,7 +337,7 @@ SSIDが一つになるのはすっきりしてていいと思う。</p>
 </div>
 
     <footer role="contentinfo">
-      <p>Copyright &copy; 2019 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
+      <p>Copyright &copy; 2020 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
         <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
       </p>
     </footer>

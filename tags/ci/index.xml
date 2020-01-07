@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ci on メモ的な何か</title>
+    <title>CI on メモ的な何か</title>
     <link>https://eikpyrmir.github.io/tags/ci/</link>
-    <description>Recent content in Ci on メモ的な何か</description>
+    <description>Recent content in CI on メモ的な何か</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <lastBuildDate>Wed, 06 Mar 2019 19:00:00 +0900</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 06 Mar 2019 19:00:00 +0900</pubDate>
       
       <guid>https://eikpyrmir.github.io/blog/2019-03-06/2019-03-06-circleci/</guid>
-      <description>&lt;p&gt;Hugo + Github Pages + CircleCIを使ってデプロイする時に、&lt;br /&gt;
+      <description>&lt;p&gt;Hugo + Github Pages + CircleCIを使ってデプロイする時に、&lt;br&gt;
 CircleCIの設定にハマったので、メモ。&lt;/p&gt;</description>
     </item>
     

@@ -40,7 +40,7 @@
   <meta name="author" content="Eikpyrmir">
 
   
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.62.2" />
 
   
   
@@ -133,22 +133,23 @@
           
           
           
-          <p>Hugo + Github Pages + CircleCIを使ってデプロイする時に、<br />
+          <p>Hugo + Github Pages + CircleCIを使ってデプロイする時に、<br>
 CircleCIの設定にハマったので、メモ。</p>
-
 <h3 id="circleciに登録する前に">CircleCIに登録する前に</h3>
-
 <ol>
-<li><p>CircleCIがgithubへpushするために、SSH Keyをssh-keygen -t ecdsa -b 384 -m pemで作成しておく</p></li>
-
-<li><p>githubに生成したSSH公開鍵を設定</p></li>
-
-<li><p>Hugoのディレクトリに.circleci/config.ymlを作成</p></li>
+<li>
+<p>CircleCIがgithubへpushするために、SSH Keyをssh-keygen -t ecdsa -b 384 -m pemで作成しておく</p>
+</li>
+<li>
+<p>githubに生成したSSH公開鍵を設定</p>
+</li>
+<li>
+<p>Hugoのディレクトリに.circleci/config.ymlを作成</p>
+</li>
 </ol>
-
 <ul>
-<li><p>フォルダ構成</p>
-
+<li>フォルダ構成</li>
+</ul>
 <pre><code>.
 ├── .circleci
 │   └── config.yml
@@ -161,9 +162,8 @@ CircleCIの設定にハマったので、メモ。</p>
 ├── resources
 ├── static
 └── themes
-</code></pre></li>
-
-<li><p>config.yml</p></li>
+</code></pre><ul>
+<li>config.yml</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version: <span style="color:#ae81ff">2</span>
 jobs:
@@ -185,14 +185,14 @@ jobs:
       - run:
           name: Building pages
           command: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">              git submodule update --init --recursive</span>
+</span><span style="color:#e6db74">             </span><span style="color:#e6db74"> </span><span style="color:#e6db74">git submodule update --init --recursive</span>
               HUGO_ENV=production hugo -v
               git config --global user.name <span style="color:#e6db74">&#34;xxxx&#34;</span>
               git config --global user.email <span style="color:#e6db74">&#34;xxxx&#34;</span>
       - run:
           name: push to master
           command: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">              git clone https://github.com/xxxx/xxxx.github.io.git</span>
+</span><span style="color:#e6db74">             </span><span style="color:#e6db74"> </span><span style="color:#e6db74">git clone https://github.com/xxxx/xxxx.github.io.git</span>
               ls
               cp -rp public/* xxxx.github.io/
               cd xxxx.github.io
@@ -200,23 +200,25 @@ jobs:
               git status
               git add .
               git commit -m <span style="color:#e6db74">&#34;circle ci update&#34;</span>
-              git push origin master</code></pre></div>
-<p>fingerprintsは、githubに登録したSSH Keyのfingerprintを設定して、<br />
+              git push origin master
+</code></pre></div><p>fingerprintsは、githubに登録したSSH Keyのfingerprintを設定して、<br>
 コミットとプッシュをしておく</p>
-
 <h3 id="circleciの設定">CircleCIの設定</h3>
-
 <ol>
-<li><p>CircleCIのアカウントを作成し、ダッシュボードからADD PROJECT</p></li>
-
-<li><p>リポジトリを選択し、Set Up Project</p></li>
-
-<li><p>PERMISSIONS、SSH Permissionsを選択し、Add SSH Key</p></li>
-
-<li><p>SSH秘密鍵を設定</p></li>
+<li>
+<p>CircleCIのアカウントを作成し、ダッシュボードからADD PROJECT</p>
+</li>
+<li>
+<p>リポジトリを選択し、Set Up Project</p>
+</li>
+<li>
+<p>PERMISSIONS、SSH Permissionsを選択し、Add SSH Key</p>
+</li>
+<li>
+<p>SSH秘密鍵を設定</p>
+</li>
 </ol>
-
-<p>これでgithubへpushするたびにCircleCIが走り、デプロイしてくれるはず<br />
+<p>これでgithubへpushするたびにCircleCIが走り、デプロイしてくれるはず<br>
 いろいろミスってfailedしまくった</p>
         </div>
         
@@ -335,6 +337,14 @@ jobs:
           
           
             
+          
+            
+              <li class="post">
+                <a href="/blog/2020-01-07/2020-01-07-broadcast-iptalbes/">UDPブロードキャストのルーター転送</a>
+              </li>
+            
+          
+            
               <li class="post">
                 <a href="/blog/2019-03-19/2019-03-19-tp-link-a2600/">TP-Link Archer A2600購入</a>
               </li>
@@ -358,8 +368,6 @@ jobs:
               </li>
             
           
-            
-          
         </ul>
       </section>
     
@@ -370,7 +378,7 @@ jobs:
 </div>
 
     <footer role="contentinfo">
-      <p>Copyright &copy; 2019 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
+      <p>Copyright &copy; 2020 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
         <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
       </p>
     </footer>

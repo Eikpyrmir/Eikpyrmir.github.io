@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on メモ的な何か</title>
@@ -6,10 +6,25 @@
     <description>Recent content in Linux on メモ的な何か</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 06 Mar 2019 19:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 12:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://eikpyrmir.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>UDPブロードキャストのルーター転送</title>
+      <link>https://eikpyrmir.github.io/blog/2020-01-07/2020-01-07-broadcast-iptalbes/</link>
+      <pubDate>Tue, 07 Jan 2020 12:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/blog/2020-01-07/2020-01-07-broadcast-iptalbes/</guid>
+      <description>&lt;p&gt;以下のようなネットワークで、&lt;/p&gt;
+&lt;p&gt;クライアントAからクライアントBのアドレスにブロードキャスト&lt;/p&gt;
+&lt;p&gt;した時に、ブロードキャストが転送されるように設定するメモ。&lt;/p&gt;
+&lt;p&gt;なお、ルーターはOpenWrt 18.04を使用。&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://eikpyrmir.github.io/img/2020-01-07-broadcast-iptables.png&#34;/&gt; 
+&lt;/figure&gt;</description>
+    </item>
     
     <item>
       <title>Hugo &#43; Github Pages &#43; CircleCI</title>
@@ -17,7 +32,7 @@
       <pubDate>Wed, 06 Mar 2019 19:00:00 +0900</pubDate>
       
       <guid>https://eikpyrmir.github.io/blog/2019-03-06/2019-03-06-circleci/</guid>
-      <description>&lt;p&gt;Hugo + Github Pages + CircleCIを使ってデプロイする時に、&lt;br /&gt;
+      <description>&lt;p&gt;Hugo + Github Pages + CircleCIを使ってデプロイする時に、&lt;br&gt;
 CircleCIの設定にハマったので、メモ。&lt;/p&gt;</description>
     </item>
     
@@ -28,9 +43,7 @@ CircleCIの設定にハマったので、メモ。&lt;/p&gt;</description>
       
       <guid>https://eikpyrmir.github.io/blog/2019-03-04/2019-03-04-docker-iptalbes/</guid>
       <description>&lt;p&gt;KVMとDockerを使う環境で、イーサネットデバイスをブリッジして使用する時に&lt;/p&gt;
-
 &lt;p&gt;iptablesを設定しておかないと、通信できない問題。&lt;/p&gt;
-
 &lt;p&gt;何回かハマっているのでメモ。&lt;/p&gt;</description>
     </item>
     

@@ -40,7 +40,7 @@
   <meta name="author" content="Eikpyrmir">
 
   
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.62.2" />
 
   
   
@@ -134,24 +134,17 @@
           
           
           <p>KVMとDockerを使う環境で、イーサネットデバイスをブリッジして使用する時に</p>
-
 <p>iptablesを設定しておかないと、通信できない問題。</p>
-
 <p>何回かハマっているのでメモ。</p>
-
-<h3 id="systemd-docker-service">Systemd docker.service</h3>
-
+<h3 id="systemd-dockerservice">Systemd docker.service</h3>
 <ul>
 <li>/lib/systemd/system/docker.service [Service]へ2行追加</li>
 </ul>
-
 <pre><code>[Service]
 
 ExecStartPost=/sbin/iptables -I DOCKER-USER -i br0 -j ACCEPT
 ExecStartPost=/sbin/iptables -I DOCKER-USER -o br0 -j ACCEPT
-</code></pre>
-
-<p>アップデートすると消えてしまうので、他にいい手はないものか。。。</p>
+</code></pre><p>アップデートすると消えてしまうので、他にいい手はないものか。。。</p>
         </div>
         
 
@@ -269,6 +262,14 @@ ExecStartPost=/sbin/iptables -I DOCKER-USER -o br0 -j ACCEPT
           
           
             
+          
+            
+              <li class="post">
+                <a href="/blog/2020-01-07/2020-01-07-broadcast-iptalbes/">UDPブロードキャストのルーター転送</a>
+              </li>
+            
+          
+            
               <li class="post">
                 <a href="/blog/2019-03-19/2019-03-19-tp-link-a2600/">TP-Link Archer A2600購入</a>
               </li>
@@ -292,8 +293,6 @@ ExecStartPost=/sbin/iptables -I DOCKER-USER -o br0 -j ACCEPT
               </li>
             
           
-            
-          
         </ul>
       </section>
     
@@ -304,7 +303,7 @@ ExecStartPost=/sbin/iptables -I DOCKER-USER -o br0 -j ACCEPT
 </div>
 
     <footer role="contentinfo">
-      <p>Copyright &copy; 2019 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
+      <p>Copyright &copy; 2020 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
         <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
       </p>
     </footer>

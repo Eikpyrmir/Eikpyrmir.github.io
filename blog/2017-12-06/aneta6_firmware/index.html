@@ -40,7 +40,7 @@
   <meta name="author" content="Eikpyrmir">
 
   
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.62.2" />
 
   
   
@@ -134,11 +134,8 @@
           
           
           <p>基本的に、下記URLの通り。</p>
-
 <p><a href="https://github.com/JohnnyTheOne/anet3dprinter">https://github.com/JohnnyTheOne/anet3dprinter</a></p>
-
 <h3 id="必要なもの">必要なもの</h3>
-
 <ul>
 <li>Arduino IDE（実行時のバージョンは1.8.2）</li>
 <li>Sanguino</li>
@@ -146,210 +143,175 @@
 <li>Arduino UNO(ISP)</li>
 <li>オスメスジャンパーワイヤ x 6</li>
 </ul>
-
 <h3 id="注意点">注意点</h3>
-
 <ul>
 <li>Firmware書き込みの時は、AnetのAC電源はいれない</li>
 </ul>
-
 <h3 id="arduino-ideインストール">Arduino IDEインストール</h3>
-
 <ul>
-<li><p>Arduino IDEを公式サイトからダウンロードし、セットアップ</p>
-
-<p><a href="https://www.arduino.cc/">https://www.arduino.cc/</a></p></li>
+<li>
+<p>Arduino IDEを公式サイトからダウンロードし、セットアップ</p>
+<p><a href="https://www.arduino.cc/">https://www.arduino.cc/</a></p>
+</li>
 </ul>
-
 <h3 id="arduino-ide追加ボード設定">Arduino IDE追加ボード設定</h3>
-
 <ul>
-<li><p>Arduino IDEを立ち上げ、ファイル、環境設定の追加のボードマネージャのURLにSanguinoを追加</p>
-
-<p><a href="https://raw.githubusercontent.com/Lauszus/Sanguino/master/package_lauszus_sanguino_index.json">https://raw.githubusercontent.com/Lauszus/Sanguino/master/package_lauszus_sanguino_index.json</a></p></li>
-
-<li><p>ツール、ボードマネージャよりSanguinoをインストール</p></li>
+<li>
+<p>Arduino IDEを立ち上げ、ファイル、環境設定の追加のボードマネージャのURLにSanguinoを追加</p>
+<p><a href="https://raw.githubusercontent.com/Lauszus/Sanguino/master/package">https://raw.githubusercontent.com/Lauszus/Sanguino/master/package</a>_lauszus_sanguino_index.json</p>
+</li>
+<li>
+<p>ツール、ボードマネージャよりSanguinoをインストール</p>
+</li>
 </ul>
-
 <h3 id="arduino-ide追加ライブラリ">Arduino IDE追加ライブラリ</h3>
-
 <ul>
 <li>Arduino IDEのスケッチ、ライブラリをインクルード、ライブラリを管理よりu8glibをインストール</li>
 </ul>
-
-<h3 id="arduino-uno-isp">Arduino UNO(ISP)</h3>
-
+<h3 id="arduino-unoisp">Arduino UNO(ISP)</h3>
 <ul>
 <li>Arduino IDEのファイル、スケッチの例、ArduinoISPを選択</li>
 <li>ツール、ボードをArduino/Geniuo Unoを選択</li>
 <li>シリアルポートをArduino UNOのポートに設定し、ISPを書き込み</li>
 </ul>
-
 <h3 id="anet-boardとarduino-unoの配線">Anet BoardとArduino UNOの配線</h3>
-
 <ul>
 <li>配線</li>
 </ul>
+<!-- raw HTML omitted -->
+<pre><code>  &lt;th align=&quot;center&quot;&gt;
+    Arduino Uno
+  &lt;/th&gt;
+&lt;/tr&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>  &lt;td align=&quot;center&quot;&gt;
+    12ピン
+  &lt;/td&gt;
+&lt;/tr&gt;
 
-<table>
-  <thead>
-    <tr>
-      <th align="center">
-        Anet Board(J3)
-      </th>
-      
-      <th align="center">
-        Arduino Uno
-      </th>
-    </tr>
-  </thead>
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    SCK
+  &lt;/td&gt;
   
-  <tbody>
-    <tr>
-      <td align="center">
-        MISO
-      </td>
-      
-      <td align="center">
-        12ピン
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        SCK
-      </td>
-      
-      <td align="center">
-        13ピン
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        RESET
-      </td>
-      
-      <td align="center">
-        10ピン
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        GND
-      </td>
-      
-      <td align="center">
-        GND
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        MOST
-      </td>
-      
-      <td align="center">
-        11ピン
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        5V
-      </td>
-      
-      <td align="center">
-        5V
-      </td>
-    </tr>
-  </tbody>
-</table>
+  &lt;td align=&quot;center&quot;&gt;
+    13ピン
+  &lt;/td&gt;
+&lt;/tr&gt;
 
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    RESET
+  &lt;/td&gt;
+  
+  &lt;td align=&quot;center&quot;&gt;
+    10ピン
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    GND
+  &lt;/td&gt;
+  
+  &lt;td align=&quot;center&quot;&gt;
+    GND
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    MOST
+  &lt;/td&gt;
+  
+  &lt;td align=&quot;center&quot;&gt;
+    11ピン
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    5V
+  &lt;/td&gt;
+  
+  &lt;td align=&quot;center&quot;&gt;
+    5V
+  &lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+<!-- raw HTML omitted -->
 <ul>
 <li>Anet Board J3のピンアサイン</li>
 </ul>
+<!-- raw HTML omitted -->
+<pre><code>  &lt;th align=&quot;center&quot;&gt;
+  &lt;/th&gt;
+&lt;/tr&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>  &lt;td align=&quot;center&quot;&gt;
+    なし
+  &lt;/td&gt;
+&lt;/tr&gt;
 
-<table>
-  <thead>
-    <tr>
-      <th align="center">
-        爪あり側
-      </th>
-      
-      <th align="center">
-      </th>
-    </tr>
-  </thead>
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    MISO
+  &lt;/td&gt;
   
-  <tbody>
-    <tr>
-      <td align="center">
-        なし
-      </td>
-      
-      <td align="center">
-        なし
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        MISO
-      </td>
-      
-      <td align="center">
-        5V
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        SCK
-      </td>
-      
-      <td align="center">
-        MOSI
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        RESET
-      </td>
-      
-      <td align="center">
-        GND
-      </td>
-    </tr>
-    
-    <tr>
-      <td align="center">
-        なし
-      </td>
-      
-      <td align="center">
-        なし
-      </td>
-    </tr>
-  </tbody>
-</table>
+  &lt;td align=&quot;center&quot;&gt;
+    5V
+  &lt;/td&gt;
+&lt;/tr&gt;
 
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    SCK
+  &lt;/td&gt;
+  
+  &lt;td align=&quot;center&quot;&gt;
+    MOSI
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    RESET
+  &lt;/td&gt;
+  
+  &lt;td align=&quot;center&quot;&gt;
+    GND
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td align=&quot;center&quot;&gt;
+    なし
+  &lt;/td&gt;
+  
+  &lt;td align=&quot;center&quot;&gt;
+    なし
+  &lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+<!-- raw HTML omitted -->
 <h3 id="marlin書き込み">Marlin書き込み</h3>
-
 <ul>
-<li><p>Anet A6用を開発してくれている人がいるので、それを使用</p>
-
-<p><a href="https://github.com/JohnnyTheOne/MarlinAnetA6">https://github.com/JohnnyTheOne/MarlinAnetA6</a></p></li>
-
-<li><p>Arduino IDEでコンパイルして、ボードをSanguino、プロセッサをATmega1214(16MHz)、書き込み装置をISP</p></li>
-
-<li><p>スケッチ、書込装置を使用して書き込む</p></li>
+<li>
+<p>Anet A6用を開発してくれている人がいるので、それを使用</p>
+<p><a href="https://github.com/JohnnyTheOne/MarlinAnetA6">https://github.com/JohnnyTheOne/MarlinAnetA6</a></p>
+</li>
+<li>
+<p>Arduino IDEでコンパイルして、ボードをSanguino、プロセッサをATmega1214(16MHz)、書き込み装置をISP</p>
+</li>
+<li>
+<p>スケッチ、書込装置を使用して書き込む</p>
+</li>
 </ul>
-
 <h3 id="所感">所感</h3>
-
 <ul>
 <li>起動時にBEEP音がならなくなったのがめっちゃ嬉しい</li>
 <li>なんか純正の時より動きがスムーズになったような、気のせいかも</li>
@@ -470,6 +432,14 @@
           
           
             
+          
+            
+              <li class="post">
+                <a href="/blog/2020-01-07/2020-01-07-broadcast-iptalbes/">UDPブロードキャストのルーター転送</a>
+              </li>
+            
+          
+            
               <li class="post">
                 <a href="/blog/2019-03-19/2019-03-19-tp-link-a2600/">TP-Link Archer A2600購入</a>
               </li>
@@ -493,8 +463,6 @@
               </li>
             
           
-            
-          
         </ul>
       </section>
     
@@ -505,7 +473,7 @@
 </div>
 
     <footer role="contentinfo">
-      <p>Copyright &copy; 2019 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
+      <p>Copyright &copy; 2020 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
         <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
       </p>
     </footer>

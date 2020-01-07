@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on メモ的な何か</title>
@@ -6,24 +6,15 @@
     <description>Recent content in Categories on メモ的な何か</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 06 Dec 2017 20:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 12:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://eikpyrmir.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>3dプリンター</title>
-      <link>https://eikpyrmir.github.io/categories/3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC/</link>
-      <pubDate>Wed, 06 Dec 2017 20:00:00 +0900</pubDate>
-      
-      <guid>https://eikpyrmir.github.io/categories/3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://eikpyrmir.github.io/categories/linux/</link>
-      <pubDate>Wed, 06 Mar 2019 19:00:00 +0900</pubDate>
+      <pubDate>Tue, 07 Jan 2020 12:00:00 +0900</pubDate>
       
       <guid>https://eikpyrmir.github.io/categories/linux/</guid>
       <description></description>
@@ -35,6 +26,15 @@
       <pubDate>Tue, 19 Mar 2019 23:00:00 +0900</pubDate>
       
       <guid>https://eikpyrmir.github.io/categories/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3Dプリンター</title>
+      <link>https://eikpyrmir.github.io/categories/3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC/</link>
+      <pubDate>Wed, 06 Dec 2017 20:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/categories/3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC/</guid>
       <description></description>
     </item>
     
