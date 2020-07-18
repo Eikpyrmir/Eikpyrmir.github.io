@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja-JP">
 <head>
@@ -16,7 +14,7 @@
   
 
   
-  <title>404 Page not found</title>
+  <title>ZFS HDD交換</title>
 
   
   
@@ -110,19 +108,89 @@
 <div id="main">
   <div id="content">
     <div>
-      <article role="article">
-        <header>
-          <h1 class="entry-title">
-            
-              There&rsquo;s nothing here
-            
-          </h1>
-        </header>
-        <div id="blog-archives" class="category">
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+  <p class="meta">2020-07-18 12:00
+    
+    
+
+    
+    
+      - <a class="label" href="https://eikpyrmir.github.io/categories/linux/">Linux </a>
+    
+  </p>
+  <h1 class="entry-title">
+     ZFS HDD交換 
+  </h1>
+</header>
+
+
+        <div class="entry-content">
           
-            Please either go back or use the navigation/sidebar menus.
           
+          
+          <p>ZFSで組んでるHDDが死にそうなので、交換時のメモ。</p>
+<p>OSはDebian 10、ZFSはraid-zのHDD 5本な構成。</p>
+<h3 id="poolのディスク調査">poolのディスク調査</h3>
+<ul>
+<li>zpool status でディスク調査</li>
+</ul>
+<h3 id="対象hddのオフライン化">対象HDDのオフライン化</h3>
+<ul>
+<li>zpool offline pool /dev/disk/by-id/xxxx</li>
+</ul>
+<h3 id="対象hddを切り離す">対象HDDを切り離す</h3>
+<p>ホットスワップ対応の場合のみ行う。</p>
+<p>切り離した後にHDD交換。</p>
+<ul>
+<li>echo &ldquo;1&rdquo; &gt; /sys/block/sdx/device/delete</li>
+</ul>
+<h3 id="新しいhddの認識">新しいHDDの認識</h3>
+<p>やらんでも自動的に認識した。</p>
+<ul>
+<li>echo 0 0 0 | tee /sys/class/scsi_host/hostx/scan</li>
+</ul>
+<h3 id="intelipark無効化">intelipark無効化</h3>
+<p>HDDの電源入れ直せとのことで、もう一度切り離してセット。</p>
+<h3 id="新しいhddをzfsに追加">新しいHDDをZFSに追加</h3>
+<ul>
+<li>zpool replace pool /dev/disk/by-id/old /dev/disk/by-id/new</li>
+</ul>
+<p>これでリビルドが始まり、ONLINEになれば終了。
+3TBx5本のraid-z2で9時間くらいで完了。</p>
         </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">Eikpyrmir</span></span>
+    
+    <time>2020-07-18 12:00</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://eikpyrmir.github.io/tags/zfs">ZFS</a>  <a class="category" href="https://eikpyrmir.github.io/tags/hotswap">hotswap</a>  <a class="category" href="https://eikpyrmir.github.io/tags/raid">RAID</a>  
+    
+    </span>
+  </p>
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://eikpyrmir.github.io/blog/2020-01-07/2020-01-07-broadcast-iptalbes/" title="UDPブロードキャストのルーター転送">UDPブロードキャストのルーター転送</a>
+    
+
+    
+  </p>
+  
+</footer>
+
       </article>
     </div>
     
@@ -254,6 +322,7 @@
 
   </div>
 </div>
+
     <footer role="contentinfo">
       <p>Copyright &copy; 2020 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
         <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
@@ -274,3 +343,4 @@
     
   </body>
 </html>
+

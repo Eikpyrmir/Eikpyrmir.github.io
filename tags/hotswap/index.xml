@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hotswap on メモ的な何か</title>
+    <link>https://eikpyrmir.github.io/tags/hotswap/</link>
+    <description>Recent content in hotswap on メモ的な何か</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sat, 18 Jul 2020 12:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://eikpyrmir.github.io/tags/hotswap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ZFS HDD交換</title>
+      <link>https://eikpyrmir.github.io/blog/2020-07-18/2020-07-18-zfs-hddreplace/</link>
+      <pubDate>Sat, 18 Jul 2020 12:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/blog/2020-07-18/2020-07-18-zfs-hddreplace/</guid>
+      <description>&lt;p&gt;ZFSで組んでるHDDが死にそうなので、交換時のメモ。&lt;/p&gt;
+&lt;p&gt;OSはDebian 10、ZFSはraid-zのHDD 5本な構成。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

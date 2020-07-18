@@ -4,7 +4,47 @@
   
   <url>
     <loc>https://eikpyrmir.github.io/categories/</loc>
-    <lastmod>2020-01-07T12:00:00+09:00</lastmod>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/tags/hotswap/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/categories/linux/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/post/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/tags/raid/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/tags/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/tags/zfs/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/blog/2020-07-18/2020-07-18-zfs-hddreplace/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eikpyrmir.github.io/</loc>
+    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
   </url>
   
   <url>
@@ -13,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://eikpyrmir.github.io/categories/linux/</loc>
-    <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://eikpyrmir.github.io/tags/openwrt/</loc>
-    <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eikpyrmir.github.io/post/</loc>
-    <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eikpyrmir.github.io/tags/</loc>
     <lastmod>2020-01-07T12:00:00+09:00</lastmod>
   </url>
   
@@ -39,11 +64,6 @@
   
   <url>
     <loc>https://eikpyrmir.github.io/blog/2020-01-07/2020-01-07-broadcast-iptalbes/</loc>
-    <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eikpyrmir.github.io/</loc>
     <lastmod>2020-01-07T12:00:00+09:00</lastmod>
   </url>
   

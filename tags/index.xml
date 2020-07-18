@@ -6,10 +6,37 @@
     <description>Recent content in Tags on メモ的な何か</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 07 Jan 2020 12:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 12:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://eikpyrmir.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hotswap</title>
+      <link>https://eikpyrmir.github.io/tags/hotswap/</link>
+      <pubDate>Sat, 18 Jul 2020 12:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/tags/hotswap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RAID</title>
+      <link>https://eikpyrmir.github.io/tags/raid/</link>
+      <pubDate>Sat, 18 Jul 2020 12:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/tags/raid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ZFS</title>
+      <link>https://eikpyrmir.github.io/tags/zfs/</link>
+      <pubDate>Sat, 18 Jul 2020 12:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/tags/zfs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>iptables</title>

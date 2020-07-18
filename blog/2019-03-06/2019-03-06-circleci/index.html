@@ -40,7 +40,7 @@
   <meta name="author" content="Eikpyrmir">
 
   
-  <meta name="generator" content="Hugo 0.62.2" />
+  <meta name="generator" content="Hugo 0.74.2" />
 
   
   
@@ -165,34 +165,34 @@ CircleCIの設定にハマったので、メモ。</p>
 </code></pre><ul>
 <li>config.yml</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version: <span style="color:#ae81ff">2</span>
-jobs:
-  build:
-    docker:
-      - image: cibuilds/hugo:latest
-    branches:
-      only:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#ae81ff">2</span>
+<span style="color:#66d9ef">jobs</span>:
+  <span style="color:#66d9ef">build</span>:
+    <span style="color:#66d9ef">docker</span>:
+      - <span style="color:#66d9ef">image</span>: cibuilds/hugo:latest
+    <span style="color:#66d9ef">branches</span>:
+      <span style="color:#66d9ef">only</span>:
         - master
-    working_directory: ~/hugo
-    steps:
-      - run:
-          name: Update enviroment
-          command: apk add --no-cache git
-      - checkout:
-      - add_ssh_keys:
-          fingerprints:
+    <span style="color:#66d9ef">working_directory</span>: ~/hugo
+    <span style="color:#66d9ef">steps</span>:
+      - <span style="color:#66d9ef">run</span>:
+          <span style="color:#66d9ef">name</span>: Update enviroment
+          <span style="color:#66d9ef">command</span>: apk add --no-cache git
+      - <span style="color:#66d9ef">checkout</span>:
+      - <span style="color:#66d9ef">add_ssh_keys</span>:
+          <span style="color:#66d9ef">fingerprints</span>:
 		    - <span style="color:#e6db74">&#34;xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx&#34;</span>
-      - run:
-          name: Building pages
-          command: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">             </span><span style="color:#e6db74"> </span><span style="color:#e6db74">git submodule update --init --recursive</span>
+      - <span style="color:#66d9ef">run</span>:
+          <span style="color:#66d9ef">name</span>: Building pages
+          <span style="color:#66d9ef">command</span>: <span style="color:#e6db74">|
+</span><span style="color:#e6db74">              git submodule update --init --recursive</span>
               HUGO_ENV=production hugo -v
               git config --global user.name <span style="color:#e6db74">&#34;xxxx&#34;</span>
               git config --global user.email <span style="color:#e6db74">&#34;xxxx&#34;</span>
-      - run:
-          name: push to master
-          command: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">             </span><span style="color:#e6db74"> </span><span style="color:#e6db74">git clone https://github.com/xxxx/xxxx.github.io.git</span>
+      - <span style="color:#66d9ef">run</span>:
+          <span style="color:#66d9ef">name</span>: push to master
+          <span style="color:#66d9ef">command</span>: <span style="color:#e6db74">|
+</span><span style="color:#e6db74">              git clone https://github.com/xxxx/xxxx.github.io.git</span>
               ls
               cp -rp public/* xxxx.github.io/
               cd xxxx.github.io
@@ -336,6 +336,12 @@ jobs:
         <ul id="recent_posts">
           
           
+            
+          
+            
+              <li class="post">
+                <a href="/blog/2020-07-18/2020-07-18-zfs-hddreplace/">ZFS HDD交換</a>
+              </li>
             
           
             
