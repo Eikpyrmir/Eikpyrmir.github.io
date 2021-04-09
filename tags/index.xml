@@ -6,10 +6,24 @@
     <description>Recent content in Tags on メモ的な何か</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 18 Jul 2020 12:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 08 Apr 2021 12:00:00 +0900</lastBuildDate><atom:link href="https://eikpyrmir.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build</title>
+      <link>https://eikpyrmir.github.io/tags/build/</link>
+      <pubDate>Thu, 08 Apr 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/tags/build/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://eikpyrmir.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Kernel</title>
+      <link>https://eikpyrmir.github.io/tags/kernel/</link>
+      <pubDate>Thu, 08 Apr 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://eikpyrmir.github.io/tags/kernel/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hotswap</title>

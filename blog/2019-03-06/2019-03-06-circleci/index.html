@@ -40,7 +40,7 @@
   <meta name="author" content="Eikpyrmir">
 
   
-  <meta name="generator" content="Hugo 0.74.2" />
+  <meta name="generator" content="Hugo 0.82.0" />
 
   
   
@@ -165,42 +165,42 @@ CircleCIの設定にハマったので、メモ。</p>
 </code></pre><ul>
 <li>config.yml</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#ae81ff">2</span>
-<span style="color:#66d9ef">jobs</span>:
-  <span style="color:#66d9ef">build</span>:
-    <span style="color:#66d9ef">docker</span>:
-      - <span style="color:#66d9ef">image</span>: cibuilds/hugo:latest
-    <span style="color:#66d9ef">branches</span>:
-      <span style="color:#66d9ef">only</span>:
-        - master
-    <span style="color:#66d9ef">working_directory</span>: ~/hugo
-    <span style="color:#66d9ef">steps</span>:
-      - <span style="color:#66d9ef">run</span>:
-          <span style="color:#66d9ef">name</span>: Update enviroment
-          <span style="color:#66d9ef">command</span>: apk add --no-cache git
-      - <span style="color:#66d9ef">checkout</span>:
-      - <span style="color:#66d9ef">add_ssh_keys</span>:
-          <span style="color:#66d9ef">fingerprints</span>:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#ae81ff">2</span>
+<span style="color:#f92672">jobs</span>:
+  <span style="color:#f92672">build</span>:
+    <span style="color:#f92672">docker</span>:
+      - <span style="color:#f92672">image</span>: <span style="color:#ae81ff">cibuilds/hugo:latest</span>
+    <span style="color:#f92672">branches</span>:
+      <span style="color:#f92672">only</span>:
+        - <span style="color:#ae81ff">master</span>
+    <span style="color:#f92672">working_directory</span>: <span style="color:#ae81ff">~/hugo</span>
+    <span style="color:#f92672">steps</span>:
+      - <span style="color:#f92672">run</span>:
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Update enviroment</span>
+          <span style="color:#f92672">command</span>: <span style="color:#ae81ff">apk add --no-cache git</span>
+      - <span style="color:#f92672">checkout</span>:
+      - <span style="color:#f92672">add_ssh_keys</span>:
+          <span style="color:#f92672">fingerprints</span>:
 		    - <span style="color:#e6db74">&#34;xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx&#34;</span>
-      - <span style="color:#66d9ef">run</span>:
-          <span style="color:#66d9ef">name</span>: Building pages
-          <span style="color:#66d9ef">command</span>: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">              git submodule update --init --recursive</span>
-              HUGO_ENV=production hugo -v
-              git config --global user.name <span style="color:#e6db74">&#34;xxxx&#34;</span>
-              git config --global user.email <span style="color:#e6db74">&#34;xxxx&#34;</span>
-      - <span style="color:#66d9ef">run</span>:
-          <span style="color:#66d9ef">name</span>: push to master
-          <span style="color:#66d9ef">command</span>: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">              git clone https://github.com/xxxx/xxxx.github.io.git</span>
-              ls
-              cp -rp public/* xxxx.github.io/
-              cd xxxx.github.io
-              ls
-              git status
-              git add .
-              git commit -m <span style="color:#e6db74">&#34;circle ci update&#34;</span>
-              git push origin master
+      - <span style="color:#f92672">run</span>:
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Building pages</span>
+          <span style="color:#f92672">command</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">              git submodule update --init --recursive
+</span><span style="color:#e6db74">              HUGO_ENV=production hugo -v
+</span><span style="color:#e6db74">              git config --global user.name &#34;xxxx&#34;
+</span><span style="color:#e6db74">              git config --global user.email &#34;xxxx&#34;</span>              
+      - <span style="color:#f92672">run</span>:
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">push to master</span>
+          <span style="color:#f92672">command</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">              git clone https://github.com/xxxx/xxxx.github.io.git
+</span><span style="color:#e6db74">              ls
+</span><span style="color:#e6db74">              cp -rp public/* xxxx.github.io/
+</span><span style="color:#e6db74">              cd xxxx.github.io
+</span><span style="color:#e6db74">              ls
+</span><span style="color:#e6db74">              git status
+</span><span style="color:#e6db74">              git add .
+</span><span style="color:#e6db74">              git commit -m &#34;circle ci update&#34;
+</span><span style="color:#e6db74">              git push origin master</span>              
 </code></pre></div><p>fingerprintsは、githubに登録したSSH Keyのfingerprintを設定して、<br>
 コミットとプッシュをしておく</p>
 <h3 id="circleciの設定">CircleCIの設定</h3>
@@ -337,6 +337,12 @@ CircleCIの設定にハマったので、メモ。</p>
           
           
             
+              <li class="post">
+                <a href="/blog/2021-04-08/2021-04-08-debian-kbuild/">Debian 10 Kernel再構築</a>
+              </li>
+            
+          
+            
           
             
               <li class="post">
@@ -384,7 +390,7 @@ CircleCIの設定にハマったので、メモ。</p>
 </div>
 
     <footer role="contentinfo">
-      <p>Copyright &copy; 2020 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
+      <p>Copyright &copy; 2021 Eikpyrmir - <a href="https://eikpyrmir.github.io/license/">License</a> -
         <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
       </p>
     </footer>

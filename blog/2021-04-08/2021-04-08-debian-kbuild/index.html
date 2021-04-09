@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja-JP">
 <head>
@@ -17,7 +14,7 @@
   
 
   
-  <title>iptables</title>
+  <title>Debian 10 Kernel再構築</title>
 
   
   
@@ -36,7 +33,7 @@
   <link href="https://eikpyrmir.github.io/favicon.png" rel="icon">
 
   
-  <link href="https://eikpyrmir.github.io/tags/iptables/index.xml" rel="alternate" type="application/rss+xml" title="メモ的な何か" />
+  
 
   <meta name="description" content="" />
   <meta name="keywords" content="[Linux ガジェット]">
@@ -111,47 +108,112 @@
 <div id="main">
   <div id="content">
     <div>
-      <article role="article">
-        <header>
-          <h1 class="entry-title">
-            Tag: iptables
-          </h1>
-        </header>
-        <div id="blog-archives" class="category">
-          
-          <h2>
-            2020
-          </h2>
-          <article>
-            <h1>
-              <a href="https://eikpyrmir.github.io/blog/2020-01-07/2020-01-07-broadcast-iptalbes/" title="UDPブロードキャストのルーター転送">UDPブロードキャストのルーター転送</a>
-            </h1>
-            <time>
-              <span class="month">01 /</span>
-              <span class="day">07</span>
-            </time>
-            <footer>
-              <span class="categories"> 
-                
-                
-                posted in:
-                 <a class="category" href="https://eikpyrmir.github.io/categories/linux">Linux</a>
-              </br>
-                
+      <article class="hentry" role="article">
 
-                
-                
-                tags:
-                 <a class="category" href="https://eikpyrmir.github.io/tags/openwrt">OpenWrt</a> <a class="category" href="https://eikpyrmir.github.io/tags/iptables">iptables</a> <a class="category" href="https://eikpyrmir.github.io/tags/udp">UDP</a>
-                
-              </span>
-            </footer>
-          </article>
+        
+        
+
+<header>
+  <p class="meta">2021-04-08 12:00
+    
+    
+
+    
+    
+      - <a class="label" href="https://eikpyrmir.github.io/categories/linux/">Linux </a>
+    
+  </p>
+  <h1 class="entry-title">
+     Debian 10 Kernel再構築 
+  </h1>
+</header>
+
+
+        <div class="entry-content">
           
+          
+          
+          <p>HPE LTTやSOSを使いたかったが、</p>
+<p>/proc/scsiがないため、使えないっぽいので、</p>
+<p>カーネルを再構築するメモ。</p>
+<h3 id="パッケージのインストール">パッケージのインストール</h3>
+<ul>
+<li>apt build-dep linux</li>
+</ul>
+<h3 id="カーネルソース取得">カーネルソース取得</h3>
+<ul>
+<li>apt install linux-source</li>
+</ul>
+<h3 id="カーネルソース展開">カーネルソース展開</h3>
+<ul>
+<li>
+<p>mkdir ~/work/linux-src</p>
+</li>
+<li>
+<p>cd ~/work/linux-src</p>
+</li>
+<li>
+<p>tar Jxvf /usr/src/linux-source-xxxx.tar.xz</p>
+</li>
+</ul>
+<h3 id="configのコピー">.configのコピー</h3>
+<ul>
+<li>cp /boot/config-xxxx ~/work/linux-src/linux-source-xxxx/.config</li>
+</ul>
+<h3 id="config_scsi_proc_fsを有効化">CONFIG_SCSI_PROC_FSを有効化</h3>
+<ul>
+<li>
+<p>cd ~/work/linux-src/linux-source-xxxx</p>
+</li>
+<li>
+<p>./scripts/config &ndash;enable CONFIG_SCSI_PROC_FS &ndash;set-str MODULE_SIG_KEY &quot;&quot;</p>
+</li>
+</ul>
+<h3 id="make">make</h3>
+<ul>
+<li>make -j4 bindeb-pkg</li>
+</ul>
+<h3 id="カーネルのインストール">カーネルのインストール</h3>
+<ul>
+<li>
+<p>dpkg -i ../linux-headers-xxxx.deb ../linux-libc-dev_xxxxx.deb</p>
+</li>
+<li>
+<p>dpkg -i ../linux-image-xxxx.deb</p>
+</li>
+</ul>
+<p>ビルドしたら22Gくらいになったので、空き容量に注意。</p>
         </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">Eikpyrmir</span></span>
+    
+    <time>2021-04-08 12:00</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://eikpyrmir.github.io/tags/kernel">Kernel</a>  <a class="category" href="https://eikpyrmir.github.io/tags/build">Build</a>  
+    
+    </span>
+  </p>
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://eikpyrmir.github.io/blog/2020-07-18/2020-07-18-zfs-hddreplace/" title="ZFS HDD交換">ZFS HDD交換</a>
+    
+
+    
+  </p>
+  
+</footer>
+
       </article>
     </div>
-
     
 
 <aside class="sidebar thirds">

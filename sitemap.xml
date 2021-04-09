@@ -1,150 +1,101 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://eikpyrmir.github.io/tags/build/</loc>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
     <loc>https://eikpyrmir.github.io/categories/</loc>
-    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://eikpyrmir.github.io/blog/2021-04-08/2021-04-08-debian-kbuild/</loc>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://eikpyrmir.github.io/tags/kernel/</loc>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://eikpyrmir.github.io/categories/linux/</loc>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://eikpyrmir.github.io/post/</loc>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://eikpyrmir.github.io/tags/</loc>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://eikpyrmir.github.io/</loc>
+    <lastmod>2021-04-08T12:00:00+09:00</lastmod>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/hotswap/</loc>
     <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eikpyrmir.github.io/categories/linux/</loc>
-    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eikpyrmir.github.io/post/</loc>
-    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/raid/</loc>
     <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eikpyrmir.github.io/tags/</loc>
-    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/zfs/</loc>
     <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/blog/2020-07-18/2020-07-18-zfs-hddreplace/</loc>
     <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eikpyrmir.github.io/</loc>
-    <lastmod>2020-07-18T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/iptables/</loc>
     <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/openwrt/</loc>
     <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/udp/</loc>
     <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/blog/2020-01-07/2020-01-07-broadcast-iptalbes/</loc>
     <lastmod>2020-01-07T12:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/tp-link/</loc>
     <lastmod>2019-03-19T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/blog/2019-03-19/2019-03-19-tp-link-a2600/</loc>
     <lastmod>2019-03-19T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/categories/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</loc>
     <lastmod>2019-03-19T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/%E7%84%A1%E7%B7%9Alan%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC/</loc>
     <lastmod>2019-03-19T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/ci/</loc>
     <lastmod>2019-03-06T19:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/github-pages/</loc>
     <lastmod>2019-03-06T19:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/hugo/</loc>
     <lastmod>2019-03-06T19:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/blog/2019-03-06/2019-03-06-circleci/</loc>
     <lastmod>2019-03-06T19:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/debian/</loc>
     <lastmod>2019-03-04T18:52:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/docker/</loc>
     <lastmod>2019-03-04T18:52:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/blog/2019-03-04/2019-03-04-docker-iptalbes/</loc>
     <lastmod>2019-03-04T18:52:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/systemd/</loc>
     <lastmod>2019-03-04T18:52:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/about/</loc>
     <lastmod>2019-03-04T14:54:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/categories/3d%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC/</loc>
     <lastmod>2017-12-06T20:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/blog/2017-12-06/aneta6_firmware/</loc>
     <lastmod>2017-12-06T20:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://eikpyrmir.github.io/tags/marlin/</loc>
     <lastmod>2017-12-06T20:00:00+09:00</lastmod>
   </url>
-  
 </urlset>
